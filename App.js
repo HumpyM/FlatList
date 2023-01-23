@@ -1,20 +1,34 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import {StyleSheet, View, Text } from 'react-native'
+import React from 'react'
+import Pizzatranslator from './components/Start';
+import FlatListDemo from './components/FlatListDemo';
+import FlatListSections from './components/FlatListSelector';
 
-export default function App() {
+export default function App(){
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Text style={styles.heading}>ReactNat</Text>
+      <FlatListDemo/>
+      <FlatListSections/>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+    container:{
+        flex:1,
+        backgroundColor: "lightblue",
+        alignitems:'center',
+        justifyContent:'center',
+
+    },
+    heading:{
+        marginTop:10,
+        textAlign:"center",
+        fontSize:20,
+        fontWeight: 'bold',
+        color:'yellow',
+        background:'black'
+
+    },
+})
